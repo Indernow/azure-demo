@@ -40,7 +40,10 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: node-app
-
+  permissions:
+    id-token: write
+    contents: read
+    
       - name: Login to Azure
         uses: azure/login@v2
         with:
